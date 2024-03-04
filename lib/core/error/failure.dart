@@ -23,7 +23,7 @@ class CachedFailure extends Failure{
 class ServerFailure extends Failure{
   const ServerFailure({required super.message,required super.statusCode});
 
-  ServerException.fromException(ServerException exception)
+  ServerFailure.fromException(ServerException exception)
   :this(message: exception.message, statusCode: exception.statusCode);
 
 }
